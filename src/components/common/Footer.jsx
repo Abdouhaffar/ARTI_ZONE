@@ -1,0 +1,70 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin } from 'lucide-react';
+
+const Footer = () => {
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* معلومات المشروع */}
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold mb-4">ARTIZONE</h3>
+            <p className="text-gray-300 mb-4">
+              منصة جزائرية تهدف إلى ربط المواطنين بالحرفيين الموثوقين في مختلف التخصصات والمناطق. 
+            </p>
+            <div className="flex items-center space-x-4 space-x-reverse">
+              <div className="flex items-center text-gray-300">
+                <Phone className="w-4 h-4 ml-2" />
+                <span>0550 123 456</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Mail className="w-4 h-4 ml-2" />
+                <span>contact@artizone.dz</span>
+              </div>
+            </div>
+          </div>
+
+          {/* روابط سريعة */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">روابط سريعة</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="text-gray-300 hover:text-white">الرئيسية</Link>
+              </li>
+              <li>
+                <Link to="/search" className="text-gray-300 hover:text-white">البحث عن حرفيين</Link>
+              </li>
+              <li>
+                <Link to="/register" className="text-gray-300 hover:text-white">التسجيل كحرفي</Link>
+              </li>
+              <li>
+                <Link to="/vip" className="text-gray-300 hover:text-white">باقات VIP</Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* خدمات */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">الخدمات</h4>
+            <ul className="space-y-2">
+              <li><span className="text-gray-300">سباكة</span></li>
+              <li><span className="text-gray-300">كهرباء</span></li>
+              <li><span className="text-gray-300">بناء</span></li>
+              <li><span className="text-gray-300">نجارة</span></li>
+              <li><span className="text-gray-300">وكافة المهن</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p className="text-gray-300">
+            © 2024 ARTIZONE. جميع الحقوق محفوظة.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
